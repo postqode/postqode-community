@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+    <PackageReference Include="coverlet.collector" Version="6.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\TfsMcpServer\TfsMcpServer.csproj">
+      <!--
+        ProjectReference does NOT automatically forward MSBuild properties to the
+        referenced project — setting <MockOnly>true</MockOnly> above only applies
+        to this test project's own build. AdditionalProperties explicitly passes
+        MockOnly=true into TfsMcpServer.csproj's build, so it excludes
+        TfsConnectionFactory.cs / TfsWorkItemStore.cs and skips the TFS NuGet
+        package, exactly like running `dotnet build -p:MockOnly=true` by hand.
+      -->
+      <AdditionalProperties>MockOnly=true</AdditionalProperties>
+    </ProjectReference>
+  </ItemGroup>
+
+</Project>
