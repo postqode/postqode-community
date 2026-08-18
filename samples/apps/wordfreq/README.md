@@ -10,6 +10,8 @@ frequent words.
 
 ## What's in this repo
 
+The five prompts are saved as PostQode workflows, project-local, checked into this repo under `.postqode/workflows/`, so they travel with a `git clone` and are runnable immediately as slash commands, no copy-pasting required.
+
 | File                      | Stage        | Mode  | Produces                              |
 |---------------------------|--------------|-------|---------------------------------------|
 | `1_PM_GenRequirements.md` | Requirements | Plan  | `requirements.md`                     |
@@ -27,6 +29,8 @@ the application code, tests, and `deploy.md`.
 `Text_for_testing.md` is a short original passage on the origin of the term "bug" in
 computing (the 1947 Harvard Mark II moth incident), handy for pasting into the app once
 it's running to see the word frequency output on real text.
+
+See [ABOUT.md](ABOUT.md) for why this sample app was chosen.
 
 ## How to run this
 
