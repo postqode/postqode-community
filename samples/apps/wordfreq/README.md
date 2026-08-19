@@ -26,9 +26,7 @@ This repo intentionally contains only the prompts and the answer key, not the ge
 output. Running the prompts yourself is what produces `requirements.md`, `design.md`,
 the application code, tests, and `deploy.md`.
 
-`Text_for_testing.md` is a short original passage on the origin of the term "bug" in
-computing (the 1947 Harvard Mark II moth incident), handy for pasting into the app once
-it's running to see the word frequency output on real text.
+`Text_for_testing.md` is a short passage, handy for pasting into the app once it's running to see the word frequency output on real text.
 
 See [ABOUT.md](ABOUT.md) for why this sample app was chosen.
 
